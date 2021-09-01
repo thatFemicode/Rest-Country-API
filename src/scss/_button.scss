@@ -1,0 +1,32 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 12px;
+  font-family: var(--ff-primary);
+  letter-spacing: 0.5px;
+  background: var(--elements);
+  color: text;
+
+  &.icon {
+    margin-right: 0.5rem;
+  }
+}
+
+.toggle-btn {
+  background: none;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+}
+
+.btn-block {
+  display: block;
+  background: var(--bg);
+  color: var(--White);
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+// body {
+//   background-color: map-get($map: $colors, $key: background-light);
+//   color: map-get($map: $colors, $key: font-light);
+//   &.dark-theme {
+//     background-color: map-get($map: $colors, $key: background-dark);
+//     color: map-get($map: $colors, $key: font-dark);
+//   }
+// }
+// .base {
+//   @include themify() {
+//     color: themed("text");
+//     background: themed("background");
+//   }
+//   // @include applyThemedBgWithCorrectTextColor("my-class-bg");
+// }
+// .theme {
+//   height: 100vh;
+//   width: 100%;
+// }
+body {
+  background: var(--bg);
+  color: var(--text);
+
+  &.dark-theme {
+    --elements: hsl(209, 23%, 22%);
+    --bg: hsl(207, 26%, 17%);
+    --text: hsl(0, 0%, 100%);
+    --input: hsl(0, 0%, 52%);
+    --input2: hsl(0, 0%, 52%);
+    --light-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  }
+  &.light-theme {
+    --elements: hsl(0, 0%, 100%);
+    --bg: hsl(0, 0%, 98%);
+    --text: hsl(200, 15%, 8%);
+    --input: hsl(200, 15%, 8%);
+    --input2: hsl(0, 0%, 52%);
+    --light-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  }
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--input);
+  border: 3px solid var(--input);
+  border-radius: 10%;
+  height: 4rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}

@@ -1,0 +1,28 @@
+// creating breakpoints
+$breakpoints-up: (
+  'medium': 40em,
+  'large': 64em,
+  'mobi': 33.0625rem,
+  'middle': 31.6875rem,
+  'remove': 45.0625rem,
+  'x-large': 87.5em,
+);
+$breakpoints-down: (
+  'small': 39.9375em,
+  'middle': 31.6875rem,
+  'mobi': 33.0625rem,
+  'medium': 63.9375em,
+  'remove': 45.0625rem,
+  'large': 87.4375em,
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

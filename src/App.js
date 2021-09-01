@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import './App.css';
+// import { useGlobalContext } from './components/context/context';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Error from './pages/Error';
+import SingleCountry from './pages/SingleCountry';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/country/name">
+            <SingleCountry />
+          </Route>
+          <Route exact path="*">
+            <Error />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 

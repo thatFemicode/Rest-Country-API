@@ -1,0 +1,106 @@
+// $themes: (
+//   light: (
+//     elements:
+//       map-get(
+//         $map: $colors,
+//         $key: elements-light,
+//       ),
+//     text:
+//       map-get(
+//         $map: $colors,
+//         $key: font-light,
+//       ),
+//     background:
+//       map-get(
+//         $map: $colors,
+//         $key: background-light,
+//       ),
+//     input:
+//       map-get(
+//         $map: $colors,
+//         $key: input-light,
+//       ),
+//   ),
+//   dark: (
+//     elements:
+//       map-get(
+//         $map: $colors,
+//         $key: elements-dark,
+//       ),
+//     text:
+//       map-get(
+//         $map: $colors,
+//         $key: font-dark,
+//       ),
+//     background:
+//       map-get(
+//         $map: $colors,
+//         $key: background-dark,
+//       ),
+//     input:
+//       map-get(
+//         $map: $colors,
+//         $key: input-dark,
+//       ),
+//   ),
+// );
+// // $themes: (
+// //   light: (
+// //     background: $background-light text-color: $font-light,
+// //   ),
+// //   dark: (
+// //     background: $background-dark text-color: $font-dark,
+// //   ),
+// // );
+// @mixin themify() {
+//   @each $theme, $map in $themes {
+//     .theme-#{$theme} & {
+//       $theme-map: () !global;
+
+//       @each $key, $submap in $map {
+//         $value: map-get(map-get($themes, $theme), "#{$key}");
+//         $theme-map: map-merge(
+//           $theme-map,
+//           (
+//             $key: $value,
+//           )
+//         ) !global;
+//       }
+
+//       @content;
+//       $theme-map: null !global;
+//     }
+//   }
+// }
+
+// @function themed($key) {
+//   @return map-get($theme-map, $key);
+// }
+// // @mixin themify($themes) {
+// //   @each $theme, $map in $themes {
+// //     .theme-#{$theme} & {
+// //       $theme-map: () !global;
+// //       @each $key, $submap in $map {
+// //         $value: map-get(map-get($themes, $theme), "#{$key}");
+// //         $theme-map: map-merge(
+// //           $theme-map,
+// //           (
+// //             $key: $value,
+// //           )
+// //         ) !global;
+// //       }
+// //       @content;
+// //       $theme-map: null !global;
+// //     }
+// //   }
+// // }
+
+// // @function themed($key) {
+// //   @return map-get($theme-map, $key);
+// // }
+// // @mixin applyThemedBgWithCorrectTextColor($bg-color) {
+// //   @include themify() {
+// //     background: themed($bg-color);
+// //     color: getTextColorBasedOnBG(themed($bg-color));
+// //   }
+// // }
