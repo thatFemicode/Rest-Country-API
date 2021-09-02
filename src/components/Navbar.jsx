@@ -16,7 +16,7 @@ const Navbar = () => {
             className="btn toggle-btn"
             onClick={() => setTheme(!theme)}
           >
-            <FaMoon className="icon" />
+            <FaMoon className="icon" /> Dark Mode
           </button>
         ) : (
           <button
@@ -24,7 +24,7 @@ const Navbar = () => {
             className="btn toggle-btn"
             onClick={() => setTheme(!theme)}
           >
-            <FaSun className="icon" />
+            <FaSun className="icon" /> Light Mode
           </button>
         )}
       </div>

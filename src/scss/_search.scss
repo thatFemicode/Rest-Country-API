@@ -1,9 +1,23 @@
 .forms {
   padding: 0.5rem 0;
+
+  @include breakpoint-up(middl) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // display: none;
+  }
 }
 input,
 select {
   height: 3rem;
+  @include breakpoint-up(mobi) {
+    margin: 0;
+    flex: 1;
+    background: var(--elements);
+    color: var(--text);
+    height: 3.25rem;
+  }
 }
 .search-form {
   position: relative;
@@ -12,4 +26,76 @@ select {
   display: flex;
   align-items: center;
   font-size: 12px;
+  .icons {
+    color: var(--input2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    font-size: 12px;
+  }
+  input {
+    background: var(--elements);
+    color: var(--input);
+    width: 100%;
+    font-size: 1rem;
+    border-color: transparent;
+    box-shadow: var(--light-shadow);
+    padding: 0.75rem 4rem;
+    border-radius: var(--radius);
+    outline: none;
+  }
+}
+.select-form {
+  width: 55%;
+  @include breakpoint-up(mobi) {
+    width: unset;
+  }
+  &-select {
+    font-family: var(--ff-primary);
+    font-size: 12px;
+    width: 100%;
+    position: relative;
+    text-align: left;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: var(--light-shadow);
+    margin: 1rem 0;
+    color: var(--input);
+    /* Removes the default <select> styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg fill='grey' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-color: var(--elements);
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 50%;
+    line-height: inherit;
+
+    &::-ms-expand {
+      display: none;
+    }
+    &:focus {
+      outline: none;
+      color: var(--text);
+    }
+
+    option {
+      font-size: 0.7rem;
+      background: var(--elements);
+      color: var(--text);
+      border: none;
+      box-shadow: none;
+    }
+    @include breakpoint-up(mobi) {
+      //   margin: 0;
+      //   flex: 1;
+      //   background: var(--elements);
+      //   color: var(--text);
+      //   height: 3.25rem;
+      //   display: none;
+    }
+  }
 }

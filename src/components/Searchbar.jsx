@@ -17,6 +17,9 @@ const Searchbar = () => {
     e.preventDefault();
     setSearch((searchValue.current.value = ''));
   };
+  useEffect(() => {
+    searchValue.current.focus();
+  }, []);
   return (
     <div className="section container">
       <div className="forms">
@@ -38,6 +41,7 @@ const Searchbar = () => {
               value={region}
               name="regions"
               id="region-select"
+              className="select-form-select"
             >
               <option value="all" disabled hidden>
                 Filter by Region
