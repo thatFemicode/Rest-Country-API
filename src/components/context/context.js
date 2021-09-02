@@ -58,7 +58,9 @@ const AppProvider = ({ children }) => {
         const data = await response.json();
         setLoading(false);
         setCountry(data);
+        // console.log(data);
       }
+      setLoading(false);
     } catch (error) {
       console.log(error);
       setLoading(false);
@@ -77,6 +79,7 @@ const AppProvider = ({ children }) => {
         country,
         setTheme,
         setSearch,
+        setLoading,
         region,
       }}
     >

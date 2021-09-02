@@ -12,7 +12,6 @@ input,
 select {
   height: 3rem;
   @include breakpoint-up(mobi) {
-    margin: 0;
     flex: 1;
     background: var(--elements);
     color: var(--text);
@@ -44,6 +43,10 @@ select {
     padding: 0.75rem 4rem;
     border-radius: var(--radius);
     outline: none;
+
+    @include breakpoint-up(mobi) {
+      //   width: 30vw;
+    }
   }
 }
 .select-form {
@@ -88,14 +91,18 @@ select {
       color: var(--text);
       border: none;
       box-shadow: none;
+
+      @include breakpoint-up(mobi) {
+        font-size: 1rem;
+        padding: 1rem;
+      }
     }
     @include breakpoint-up(mobi) {
-      //   margin: 0;
-      //   flex: 1;
-      //   background: var(--elements);
-      //   color: var(--text);
-      //   height: 3.25rem;
-      //   display: none;
+      margin: 0;
+      width: unset;
+      padding: 0.75rem 5rem 0.75rem 1.5rem;
+      color: var(--text);
+      font-size: 1rem;
     }
   }
 }

@@ -43,9 +43,9 @@ const Searchbar = () => {
               id="region-select"
               className="select-form-select"
             >
-              <option value="all" disabled hidden>
+              {/* <option value="all" disabled hidden>
                 Filter by Region
-              </option>
+              </option> */}
               <option value="all">All Regions</option>
               <option value="africa">Africa</option>
               <option value="americas">Americas</option>

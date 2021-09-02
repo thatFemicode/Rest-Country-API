@@ -1,0 +1,65 @@
+.country {
+  display: grid;
+  width: 80%;
+  gap: 2rem;
+  margin: auto;
+  padding: 1rem 0;
+
+  @include breakpoint-up(middl) {
+    width: unset;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+  @include breakpoint-up(x-large) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
+
+  &-card {
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    overflow: hidden;
+    color: var(--text);
+    cursor: pointer;
+    background: var(--elements);
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+      transform: translateY(-20px);
+    }
+  }
+
+  //   @include breakpoint-up(mobi) {
+  //     flex-direction: row;
+  //     // justify-content: space-between;
+  //     // align-items: center;
+  //     flex-wrap: wrap;
+  //   }
+
+  &-info {
+    padding: 1rem 1.5rem 1.75rem;
+
+    &-name {
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+
+      span {
+        font-weight: 300;
+      }
+    }
+  }
+  &-flag {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}

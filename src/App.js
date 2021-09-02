@@ -16,7 +16,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/country/name">
+          <Route exact path="/country/:name">
             <SingleCountry />
           </Route>
           <Route exact path="*">
