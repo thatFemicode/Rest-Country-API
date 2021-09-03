@@ -22,7 +22,9 @@ const SingleCountry = () => {
     }
   }, [oName, setLoading]);
   useEffect(() => {
-    getCountry();
+    setTimeout(() => {
+      getCountry();
+    }, 3000);
   }, [getCountry]);
   console.log(loading);
   console.log(country);

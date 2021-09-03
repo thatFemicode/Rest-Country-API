@@ -67,7 +67,9 @@ const AppProvider = ({ children }) => {
     }
   }, [region, search, setLoading]);
   useEffect(() => {
-    fetchCountries();
+    setTimeout(() => {
+      fetchCountries();
+    }, 2000);
   }, [search, region, fetchCountries]);
   return (
     <AppContext.Provider
