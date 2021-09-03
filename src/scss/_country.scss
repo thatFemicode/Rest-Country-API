@@ -81,7 +81,7 @@
 
     .flag {
       width: 80%;
-      height: 250px;
+      //   height: 250px;
 
       @include breakpoint-up(large) {
         width: 100%;
@@ -102,9 +102,9 @@
     &-info {
       margin: 1rem 0 2rem;
 
-      @include breakpoint-up(mobile) {
-        margin-top: 8rem;
-      }
+      //   @include breakpoint-up(mobile) {
+      //     margin-top: 8rem;
+      //   }
       // display: none;
 
       p {
@@ -128,7 +128,7 @@
         margin-bottom: 0.5rem;
 
         @include breakpoint-up(large) {
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
 
         span {
@@ -137,6 +137,11 @@
       }
     }
     .border-section {
+      @include breakpoint-up(large) {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
       h5 {
         font-size: 1rem;
         font-weight: 800;
@@ -148,6 +153,11 @@
         gap: 0.5rem;
         margin-top: 1rem;
 
+        @include breakpoint-up(large) {
+          margin-top: 0;
+          gap: 0.75rem;
+        }
+
         .text {
           display: block;
           padding: 0.5rem 0.8rem;
@@ -155,6 +165,10 @@
           text-align: center;
           border-radius: var(--radius);
           background: var(--elements);
+
+          @include breakpoint-up(large) {
+            font-size: 1rem;
+          }
         }
       }
     }

@@ -1,0 +1,26 @@
+.error-page {
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.error-container {
+  padding: 4rem 0;
+}
+
+.loader {
+  height: 50vh;
+  display: grid;
+  place-items: center;
+}
+
+.loader img {
+  width: 10%;
+}
+
+.section-center {
+  height: 50vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
